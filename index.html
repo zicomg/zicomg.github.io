@@ -1,364 +1,993 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<!DOCTYPE HTML>
+<html lang="en">
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="Hexo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
+
+
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    <ul class="menu-list mobile-menu-list">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/13/my-new-post/" class="article-date">
-  <time datetime="2022-01-13T03:58:47.000Z" itemprop="datePublished">2022-01-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/13/my-new-post/">my new post</a>
-    </h1>
-  
 
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>sdsdjskadhsajkldhj</p>
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
 
-      
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item  white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/13/my-new-post/" data-id="ckycglbdo000114ww7qisgmnq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/13/hello-world/" class="article-date">
-  <time datetime="2022-01-12T18:48:55.450Z" itemprop="datePublished">2022-01-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/13/hello-world/">Hello World</a>
-    </h1>
-  
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>Start
+                </a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
-      
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/13/hello-world/" data-id="ckycglbdd000014ww6sho3u39" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+
+    
+</div>
+
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
 
 
-  
-    <article id="post-数学建模" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/21/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="article-date">
-  <time datetime="2021-12-20T16:11:22.372Z" itemprop="datePublished">2021-12-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h3 id="文献查询"><a href="#文献查询" class="headerlink" title="文献查询"></a>文献查询</h3><p>知网、谷歌学术、百度学术</p>
-<h3 id="美赛"><a href="#美赛" class="headerlink" title="美赛"></a>美赛</h3><p>发散思维，重点要考虑完善，模型、灵敏度测试。</p>
-<p>一些权重，需要查专家数据（学一下话术）</p>
-<p>模型得到的结果，可以分为最好、最坏和最可能的三条曲线进行分析</p>
-<p><strong>重点</strong>：要先有自己的预期结论判断，数据结果（曲线趋势或分布图规律）需符合我们的预期判断（不一样可修改）</p>
-<h2 id="数学模型"><a href="#数学模型" class="headerlink" title="数学模型"></a>数学模型</h2><h3 id="主成分分析-PCA数据降维"><a href="#主成分分析-PCA数据降维" class="headerlink" title="主成分分析(PCA数据降维)"></a>主成分分析(PCA数据降维)</h3><p>应用：数据标准化后，计算相关系数矩阵r，r越大说明自变量相关程度越大，越需要主成分分析</p>
-<h4 id="概念定义"><a href="#概念定义" class="headerlink" title="概念定义"></a>概念定义</h4><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211221001913588.png" alt="image-20211221001913588"></p>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1.求数据平均值，用数据减去平均值的差除以标准差</p>
-<p>2.求协方差矩阵</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211221002311247.png" alt="image-20211221002311247"></p>
-<p>3.求特征向量和特征值</p>
-<p>4.选取最大的k个特征值和k个特征向量构成特征矩阵</p>
-<p>5.计算</p>
-<p>​    finaldata = adjustdata*k维特征矩阵</p>
-<p>这样就将n维特征变成k维特征，实质是原始特征在k维的投影</p>
-<h4 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h4><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211221003401340.png" alt="image-20211221003401340"></p>
-<p>取数据离散程度最大的方向（u1），在二维空间上取与u1方向正交的方向u2。数据在u1上的投影损失的信息最少，降维最成功</p>
-<h5 id="最大方差理论"><a href="#最大方差理论" class="headerlink" title="最大方差理论"></a><strong>最大方差理论</strong></h5><p>在信号处理中认为信号具有较大的方差，噪声有较小的方差，信噪比就是信号与噪声的方差比，越大越好。</p>
-<p>因此可将u2视为噪声。最好的降维是将n维样本降为k维特征后，每一维的样本方差都很大</p>
-<p>最小二乘法（计算样本在u1方向上投影的绝对值之和最大，即方差最大）</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211221004927217.png" alt="image-20211221004927217"></p>
-<h3 id="模糊综合评价"><a href="#模糊综合评价" class="headerlink" title="模糊综合评价"></a>模糊综合评价</h3><p>（将多个因素融合成一个综合因素）</p>
-<p>当评价有人为判断时可用</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211223214709086.png" alt="image-20211223214709086"></p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211223214734443.png" alt="image-20211223214734443"></p>
-<p>每个因素都进行评判得到R矩阵</p>
-<p>设定权重A。<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211223215544733.png" alt="image-20211223215544733"></p>
-<p>B=A○R</p>
-<p>Rij与Aj对应取小，最后取Rij的最大</p>
-<p>根据隶属度最大原则，确定综合评价</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211223215904531.png" alt="image-20211223215904531"></p>
-<h3 id="层次分析法"><a href="#层次分析法" class="headerlink" title="层次分析法"></a>层次分析法</h3><p>本质：比较指标*权重之和</p>
-<p>问题：多因素的权重难以量化、多个选择之间难以进行比较量化，容易考虑不周全、顾此失彼</p>
-<h4 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h4><p>分而治之，两个因素之间进行比较，得到判断矩阵，两个选择就单因素进行比较，通过计算得到最终权重的值</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225122419380.png" alt="image-20211225122419380"></p>
-<p>注意：判断矩阵为人为填写，可能会出现错误（A&gt;B，B&gt;C，而C&gt;A），需要化为一致矩阵</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225123136339.png" alt="image-20211225123136339"></p>
-<h4 id="一致性检验："><a href="#一致性检验：" class="headerlink" title="一致性检验："></a><strong>一致性检验：</strong></h4><p><strong>检验判断矩阵的最大特征值</strong>(越不一致特征值相差越大)</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225123455119.png" alt="image-20211225123455119"></p>
-<h5 id="检验步骤："><a href="#检验步骤：" class="headerlink" title="检验步骤："></a>检验步骤：</h5><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225123704319.png" alt="image-20211225123704319"></p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225123728369.png" alt="image-20211225123728369"></p>
-<h5 id="修正："><a href="#修正：" class="headerlink" title="修正："></a>修正：</h5><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225125915364.png" alt="image-20211225125915364"></p>
-<h4 id="一致矩阵求权重（先归一化处理）"><a href="#一致矩阵求权重（先归一化处理）" class="headerlink" title="一致矩阵求权重（先归一化处理）"></a>一致矩阵求权重（先归一化处理）</h4><p>1.算数平均值</p>
-<p>2.几何平均值</p>
-<p>3.特征值</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225124715345.png" alt="image-20211225124715345"></p>
-<h4 id="AHP特点"><a href="#AHP特点" class="headerlink" title="AHP特点"></a>AHP特点</h4><p>将多个因素问题转化为两个因素之间的问题，将难以量化的问题简单化，即分解、判断、综合三步，克服了其他方法主观判断性过于强的缺点</p>
-<h4 id="做题时的步骤"><a href="#做题时的步骤" class="headerlink" title="做题时的步骤"></a>做题时的步骤</h4><p>1.建立系统的递阶层次结构</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225125226683.png" alt="image-20211225125226683"></p>
-<p>2.构造判断矩阵</p>
-<p>ps：准则层—&gt;方案层（即两个选择对单个因素）的判断矩阵要结合实际情况填写。（如题目有给数据的话要通过计算得到）</p>
-<p>3.进行一致性检验并计算得到权重</p>
-<p>ps：三种计算权重的方法都使用，以确保结果的稳健性</p>
-<h6 id="为了保证结果的稳健性，本文采用了三种方法分别求出了权重后计算平均值，再根据得"><a href="#为了保证结果的稳健性，本文采用了三种方法分别求出了权重后计算平均值，再根据得" class="headerlink" title="为了保证结果的稳健性，本文采用了三种方法分别求出了权重后计算平均值，再根据得"></a>为了保证结果的稳健性，本文采用了三种方法分别求出了权重后计算平均值，再根据得</h6><p>到的权重矩阵计算各方案的得分，并进行排序和综合分析，这样避免了<br>采用单一方法所产生的偏差，得出的结论将更全面、更有效</p>
-<p>4.将各层权重合成填入表中</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225130003129.png" alt="image-20211225130003129"></p>
-<h4 id="AHP局限性"><a href="#AHP局限性" class="headerlink" title="AHP局限性"></a>AHP局限性</h4><p>1.准则层不能太多（&lt;15）</p>
-<p>2.如何通过已知数据构造判断矩阵呢？（步骤2）</p>
-<h3 id="TOPSIS优劣解距离法"><a href="#TOPSIS优劣解距离法" class="headerlink" title="TOPSIS优劣解距离法"></a>TOPSIS优劣解距离法</h3><p>简介：TOPSIS 法是一种常用的综合评价方法，其能充分利用原始数据的信息，<br>其结果能精确地反映各评价方案之间的差距。</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225140828689.png" alt="image-20211225140828689"></p>
-<p><strong>关键词：不限方案与因素的数量</strong></p>
-<h4 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h4><p>1.正向化：都化为极大型（效益型指标，越大越好）</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225140304142.png" alt="image-20211225140304142"></p>
-<p>2.标准化</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225140338896.png" alt="image-20211225140338896"></p>
-<h4 id="计算得分"><a href="#计算得分" class="headerlink" title="计算得分"></a>计算得分</h4><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225140546756.png" alt="image-20211225140546756"></p>
-<p>得到结果：得分越大越好（因为是与最小值的距离占总距离的比值，而我们数据是极大型）</p>
-<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>默认不同因素权重一致</p>
-<h4 id="改进：层次分析法或熵权法"><a href="#改进：层次分析法或熵权法" class="headerlink" title="改进：层次分析法或熵权法"></a>改进：层次分析法或熵权法</h4><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225141331896.png" alt="image-20211225141331896"></p>
-<h3 id="基于熵权法对TOPSIS的修正"><a href="#基于熵权法对TOPSIS的修正" class="headerlink" title="基于熵权法对TOPSIS的修正"></a>基于熵权法对TOPSIS的修正</h3><h4 id="熵权法是一种客观赋权方法"><a href="#熵权法是一种客观赋权方法" class="headerlink" title="熵权法是一种客观赋权方法"></a>熵权法是一种客观赋权方法</h4><p>依据的原理： 指标的变异程度越⼩，所反映的信息量也越少，其对应的权值也应该越低。（客观 = 数据本身就可以告诉我们权重）<br>（一种极端的例子：对于所有的样本而言，这个指标都是相同的数值，那么我们可认为这个指标的权值为0，即这个指标对于我们的评价起不到任何帮助）  </p>
-<h4 id="信息熵的定义"><a href="#信息熵的定义" class="headerlink" title="信息熵的定义"></a>信息熵的定义</h4><p>其中，p(x)为事件发生概率，i(x)为信息量，</p>
-<p><strong>i(x)=-lnp(x)，发生概率越大，信息量越小（理所应当）</strong></p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225142303741.png" alt="image-20211225142303741"></p>
-<p><strong>信息熵越大，它的值（内容）能补充的信息量越大，则已有信息量越小（我们关注已拥有的信息量）</strong></p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225143357072.png" alt="image-20211225143357072"></p>
-<p>信息熵越大，方差越小，信息量也就越小</p>
-<h4 id="计算步骤"><a href="#计算步骤" class="headerlink" title="计算步骤"></a>计算步骤</h4><p>1.评价指标正向化、标准化</p>
-<p>2.计算每个指标的比重，即概率</p>
-<p>3.计算信息熵</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211225143149812.png" alt="image-20211225143149812"></p>
-<h4 id="原理与特点"><a href="#原理与特点" class="headerlink" title="原理与特点"></a>原理与特点</h4><p>熵权法是一种客观赋权的方法，原理：指标变异程度越小，所反映的信息越小，对应权值就小</p>
-<p>特点：</p>
-<p>本质上就是根据方差的大小确定权值，只能定性比较，在定量的时候还是要人为主观判断。</p>
-<p><strong>所有评价模型都不可能完全客观</strong></p>
-<p>ps：比赛可以用（就是某一步算权重的时候用一下，不要作为主体模型），总比自己人为定义好，发论文就不太行</p>
-<h3 id="插值算法"><a href="#插值算法" class="headerlink" title="插值算法"></a>插值算法</h3><h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p>现有数据过少，不够支撑进行数据分析，通过数学的方法，<strong>模拟产生</strong>一些新的数据来满足需求</p>
-<h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><p>构造函数拟合现有数据，然后就可在函数上插值</p>
-<h4 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h4><p>多项式插值</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211226125325361.png" alt="image-20211226125325361"></p>
-<p>拉格朗日插值</p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211226125359704.png" alt="image-20211226125359704"></p>
-<h5 id="龙格现象"><a href="#龙格现象" class="headerlink" title="龙格现象"></a>龙格现象</h5><p>高次数（n）的拉格朗日插值会产生龙格现象，即中间高度拟合，但两端波动明显，误差反而更大</p>
-<h5 id="解决：分段插值"><a href="#解决：分段插值" class="headerlink" title="解决：分段插值"></a>解决：分段插值</h5><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211226125845669.png" alt="image-20211226125845669"></p>
-<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211226125914999.png" alt="image-20211226125914999"></p>
-<p><strong>实际建模时推荐用这俩种方法</strong></p>
-<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><p>1.短期预测</p>
-<p>2.数据预处理：补全缺失数据，减少信息量的损失</p>
 
-      
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/21/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" data-id="ckycgsot70000m0wwc7fz1lws" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li></ul>
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
     </div>
-  </div>
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
 
 
-  
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/01/13/my-new-post/">my new post</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/13/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2021/12/21/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/01/13/my-new-post/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="my new post">
+                            
+                            <span class="card-title">my new post</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                sdsdjskadhsajkldhj
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/01/13/hello-world/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                            
+                            <span class="card-title">Hello World</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/12/21/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Tips文献查询知网、谷歌学术、百度学术
+美赛发散思维，重点要考虑完善，模型、灵敏度测试。
+一些权重，需要查专家数据（学一下话术）
+模型得到的结果，可以分为最好、最坏和最可能的三条曲线进行分析
+重点：要先有自己的预期结论判断，数据结果（曲线
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
     </div>
-  </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
 </footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
 
+    <!-- 雪花特效 -->
+    
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    <!-- 鼠标星星特效 -->
+    
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
 
+    <!-- Baidu Analytics -->
 
+    <!-- Baidu Push -->
 
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
-<script src="/js/script.js"></script>
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
 
+    
 
+    
 
+    <!--腾讯兔小巢-->
+    
+    
 
-  </div>
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
 </body>
+
 </html>
