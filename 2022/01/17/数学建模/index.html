@@ -472,6 +472,9 @@
 <p>一些权重，需要查专家数据（学一下话术）</p>
 <p>模型得到的结果，可以分为最好、最坏和最可能的三条曲线进行分析</p>
 <p><strong>重点</strong>：要先有自己的预期结论判断，数据结果（曲线趋势或分布图规律）需符合我们的预期判断（不一样可修改）</p>
+<p>每个图表都要有分析</p>
+<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20220121155144484.png" alt="image-20220121155144484"></p>
+<p>自己设置函数（定性分析，参数可以自己设定）：倒数，指数收敛、对数等等</p>
 <h2 id="数学模型"><a href="#数学模型" class="headerlink" title="数学模型"></a>数学模型</h2><h3 id="主成分分析-PCA数据降维"><a href="#主成分分析-PCA数据降维" class="headerlink" title="主成分分析(PCA数据降维)"></a>主成分分析(PCA数据降维)</h3><p>应用：数据标准化后，计算相关系数矩阵r，r越大说明自变量相关程度越大，越需要主成分分析</p>
 <h4 id="概念定义"><a href="#概念定义" class="headerlink" title="概念定义"></a>概念定义</h4><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211221001913588.png" alt="image-20211221001913588"></p>
 <h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1.求数据平均值，用数据减去平均值的差除以标准差</p>
@@ -480,7 +483,7 @@
 <p>3.求特征向量和特征值</p>
 <p>4.选取最大的k个特征值和k个特征向量构成特征矩阵</p>
 <p>5.计算</p>
-<p>​    finaldata = adjustdata*k维特征矩阵</p>
+<p>​    <code>finaldata = adjustdata*k维特征矩阵</code></p>
 <p>这样就将n维特征变成k维特征，实质是原始特征在k维的投影</p>
 <h4 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h4><p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20211221003401340.png" alt="image-20211221003401340"></p>
 <p>取数据离散程度最大的方向（u1），在二维空间上取与u1方向正交的方向u2。数据在u1上的投影损失的信息最少，降维最成功</p>
@@ -564,6 +567,7 @@
 <p><strong>实际建模时推荐用这俩种方法</strong></p>
 <h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><p>1.短期预测</p>
 <p>2.数据预处理：补全缺失数据，减少信息量的损失</p>
+<h3 id="马尔可夫预测"><a href="#马尔可夫预测" class="headerlink" title="马尔可夫预测"></a>马尔可夫预测</h3><p>马尔可夫链：未来只与现在有关，与过去无关</p>
 
                 
             </div>
@@ -799,18 +803,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/01/17/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                <a href="/2022/01/20/my-new-post/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数学建模">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="寒假生活">
                         
-                        <span class="card-title">数学建模</span>
+                        <span class="card-title">寒假生活</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,9 +823,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -831,7 +834,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -842,13 +844,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/13/my-new-post/">
+                <a href="/2022/01/13/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="my new post">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">my new post</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
